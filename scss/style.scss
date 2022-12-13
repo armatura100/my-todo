@@ -1,0 +1,140 @@
+@use 'reset';
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #333;
+
+    background-image: linear-gradient(118.49deg, #8434C4 32.43%, #1B5EAC 91.17%);
+    min-height: 100vh;
+}
+
+.container {
+    width: min(1200px, 100% - 20px);
+    margin-inline: auto;
+}
+
+.header {
+    padding-block: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: #fff;
+
+    &__input {
+        flex-basis: 359px;
+        background-color: transparent;
+        padding: 12px 20px;
+        font-weight: 400;
+        border: 1px solid #D1D1D1;
+        border-right: none;
+        border-radius: 10px 0px 0px 10px;
+
+        transition: border-color .3s, box-shadow .3s;
+
+        &::placeholder {
+            color: #D1D1D1;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: #fff;
+            box-shadow: 0 0 10px rgba(#fff, .4);
+        }
+    }
+
+    &__button {
+        background-color: #2CD346;
+        border-radius: 0px 10px 10px 0px;
+        padding: 12px 25px;
+
+        transition: background-color .3s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #00b61b;
+            }
+        }
+    }
+}
+
+.main {}
+
+.todo-list {
+    width: min(510px, 100%);
+    margin: 0 auto;
+}
+
+.todo-item {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 12px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: transform .3s, opacity .3s;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    &.done {
+        opacity: 0.7;
+
+        .todo-item__text {
+            opacity: 0.5;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &.fall {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    &__text {
+        position: relative;
+
+        &::after {
+            content: '';
+            height: 2px;
+            width: 0;
+
+            background-color: #333;
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            transition: width .3s;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__control {}
+
+    &__done {}
+
+    &__remove {}
+}

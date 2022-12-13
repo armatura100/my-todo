@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My todo v.1</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">
+                Todo list
+            </h1>
+            <form class="form" id="form">
+                <input class="form__input" id="form-input" autocomplete="off" type="text" placeholder="Type in the task...">
+                <button class="form__button" type="submit">
+                    add a todo
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <ul class="todo-list" id="todo-list">
+
+            </ul>
+        </div>
+    </main>
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
+
+
+<!-- <li class="todo-item">
+    <span class="todo-item__text">
+        walk the dog
+    </span>
+    <div class="todo-item__controls">
+        <button class="todo-item__control todo-item__done" type="button">
+            <img src="img/tick.svg" alt="tick">
+        </button>
+        <button class="todo-item__control todo-item__delete" type="button">
+            <img src="img/cross.svg" alt="tick">
+        </button>
+    </div>
+</li> -->
